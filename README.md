@@ -60,3 +60,26 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Added Routes 
+
+Route text
+Route products
+
+## Create Model
+
+Model Products
+
+        php artisan make:model Products
+
+## Create table products
+
+        php artisan make:migration create_table_products --create=products
+
+## Migration database to MySQL
+
+Create table products and migrate:
+
+        php artisan migrate:install
+        php artisan migrate

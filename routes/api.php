@@ -17,3 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/test', function(){
+    $response = new \Illuminate\Http\Response(json_encode(['msg' =>
+     'Minha primeira resposta de API']));       
+    $response->header('Content-Type', 'application/json');
+
+    return $response;
+});
+
+// Route products
+Route::get('/products', function () {
+    return \App\Models\Products::all();
+});
